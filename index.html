@@ -10,12 +10,100 @@ Comment Out Code Command + /
     <meta charset="utf-8" />
     <title>Unit 4 - Flexbox</title>
     <style>
+
+      h1 {
+        font-family: cursive;
+      }
+
+      img {
+        width: 500px;
+      }
  
+    .flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
     </style>
   </head>
   <body>
-    <h1>Jungle Animals</h1>
+    <center>
+    <h1>bison</h1>
 
-   
+
+    
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://cdn.britannica.com/25/189925-050-2C1D8811/Bison-grazing-Ontario-Canada.jpg">
+       </div>
+        <div class="flip-card-back">
+        <img src="https://tracks-trails.com/wp-content/uploads/2025/04/Tracks-and-Trails-Dont-Pet-the-Bison-e1744730613255.jpg.webp">
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6txk39Q2qNFkSWIcvmibw1ayRjypa3pN5_EoEDIY-xrut91TtR4u1pZ6fhHvW1xvqScs&usqp=CAU">
+       </div>
+        <div class="flip-card-back">
+        <img src="https://jacksonholewildlifesafaris.com/wp-content/uploads/2013/04/BisonBlog2.jpg">
+        </div>
+      </div>
+    </div>
+    
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="https://blogs.charleston.edu/pre-america/files/2014/01/white_Buff2.jpg">
+       </div>
+        <div class="flip-card-back">
+        <img src="https://external-preview.redd.it/rare-white-buffalo-born-in-kansas-v0-2iErC7eMLRMmU0kcTQQh9bd5iBRilzlOZt4Rk9ch3TM.jpg?width=640&crop=smart&auto=webp&s=25337582bb263d1a2cc985ff8771bd23904409db">
+        </div>
+      </div>
+    </div>
+    </div>
+   </center>
   </body>
 </html>
